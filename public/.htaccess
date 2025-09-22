@@ -1,0 +1,12 @@
+RewriteEngine On
+# If you deploy under a folder, set RewriteBase to that folder:
+# Example if your index.php is served at https://site.test/ticketathon.com/public/ :
+RewriteBase /ticketathon.com/public/
+
+# Serve existing files as-is
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Everything else -> index.php
+RewriteRule ^ index.php [QSA,L]

@@ -1,0 +1,11 @@
+{
+  "autoload": {
+    "psr-4": {
+      "Logik\\": "core/",
+      "App\\Code\\": "code/"
+    },
+    "classmap": [
+      "code/Welcome.code.php"
+    ]
+  }
+}
